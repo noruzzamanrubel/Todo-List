@@ -1,0 +1,19 @@
+ul{
+    margin-bottom: 0;
+}
+ul li{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 10px !important;
+    border-bottom: 1px solid #dee2e6;
+    padding: 10px 15px;
+}
+ul li:last-child{
+    border-bottom: none;
+}
+ul li p{
+    margin-bottom: 0;
+}
+span i {
+    cursor: pointer;
+}
