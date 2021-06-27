@@ -33,6 +33,10 @@ Route::middleware(['auth:sanctum,web', 'verified'])->get('/dashboard', function 
 })->name('dashboard');
 
 
+// Route::middleware(['auth'])->group(function () {
+    
+// });
+
 Route::group([
     'prefix' => '',
 ], function () {
@@ -41,7 +45,8 @@ Route::group([
     Route::post('/store', [TodoController::class, 'store'])->name('store');
     Route::get('/edit/{todo}', [TodoController::class, 'edit']);
     Route::post('/update/{todo}', [TodoController::class, 'update'])->name('update');
+    Route::delete('/{todo}', [TodoController::class, 'delete'])->name('todo.delete');
+
     Route::put('/{todo}', [TodoController::class, 'complete'])->name('todo.complete');
     Route::post('/{todo}', [TodoController::class, 'incomplete'])->name('todo.incomplete');
-    Route::delete('/{todo}', [TodoController::class, 'delete'])->name('todo.delete');
 });
