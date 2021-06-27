@@ -43,6 +43,10 @@ class TodoController extends Controller
         return redirect()->route('all');
     }
 
+    public function show(Todo $todo){
+        return view('todo.show',compact('todo'));
+    }
+
     public  function edit(Todo $todo){
         return view('Todo.edit', compact('todo'));
     }
@@ -51,6 +55,7 @@ class TodoController extends Controller
 
         $todo->update([
             'title'=>$request->title,
+            'description'=>$request->description,
         ]);
         return redirect()->route('all');
     }

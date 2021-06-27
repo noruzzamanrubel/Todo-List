@@ -28,3 +28,20 @@ span i {
     display: flex;
     align-items: center;
 }
+
+.todo-list-title{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.todo-list-title i {
+    font-size: 25px;
+    color: #17a2b8;
+}
+
+.add-task{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}

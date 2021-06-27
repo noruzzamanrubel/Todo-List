@@ -2,7 +2,10 @@
 
 @section('content')
     <section class="todo text-center border p-5 mt-5">
-        <h1>ToDo Lists Edit</h1>
+        <div class="todo-list-title m-3">
+            <h1>ToDo Lists Edit</h1>
+            <a class="ml-3" href="{{ route('all') }}"><i class="fas fa-arrow-left"></i></a>
+        </div>
 
         @if ($errors->any())
             <div class="alert alert-danger">
@@ -15,12 +18,15 @@
         @endif
 
 
-        <form method="POST" action="{{ route('update', $todo->id) }}" class="form-inline justify-content-center">
+        <form method="POST" action="{{ route('update', $todo->id) }}" class="justify-content-center m-4">
             @csrf
-            <input type="text" class="form-control mb-2 mr-sm-2" name="title" value="{{ $todo->title }}">
+            <div class="form-group">
+                <input type="text" class="form-control mb-2 mr-sm-2" name="title" placeholder="Title" value="{{ $todo->title }}">
+            </div>
+            <div class="form-group">
+                <textarea class="form-control" placeholder="Description" name="description" rows="3">{{ $todo->description }}</textarea>
+            </div>
             <button type="submit" class="btn btn-info mb-2">update</button>
         </form>
-        <a class="btn btn-info m-5" href="{{ route('all') }}">Back</a>
     </section>
 @endsection
-

@@ -1,7 +1,7 @@
 @extends('todo/master')
 
 @section('content')
-    <section class="todo text-center mt-5 border">
+    <section class="todo text-center mt-5 p-5 border">
         <div class="todo-header d-flex align-item-center justify-content-center my-4">
             <h3>Your Todo List</h3>
             <a class="btn btn-info ml-3" href="{{ route('create') }}"><i class="far fa-plus-square"></i></a>
@@ -18,7 +18,7 @@
                             @if ($row->completed)
                                 <p class="todo-list"><del>{{ $row->title }}</del></p>
                             @else
-                                <p class="todo-list">{{ $row->title }}</p>
+                                <a class="todo-list" href="{{route('todo.show',$row->id)}}">{{ $row->title }}</a>
                             @endif
 
                         </div>
