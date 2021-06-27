@@ -42,5 +42,6 @@ Route::group([
     Route::get('/edit/{todo}', [TodoController::class, 'edit']);
     Route::post('/update/{todo}', [TodoController::class, 'update'])->name('update');
     Route::put('/{todo}', [TodoController::class, 'complete'])->name('todo.complete');
-    Route::delete('/{todo}', [TodoController::class, 'incomplete'])->name('todo.incomplete');
+    Route::post('/{todo}', [TodoController::class, 'incomplete'])->name('todo.incomplete');
+    Route::delete('/{todo}', [TodoController::class, 'delete'])->name('todo.delete');
 });

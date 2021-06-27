@@ -17,3 +17,14 @@ ul li p{
 span i {
     cursor: pointer;
 }
+.todo-left{
+    display: flex;
+    align-items: center;
+}
+.todo-list{
+    margin-left: 10px;
+}
+.todo-right{
+    display: flex;
+    align-items: center;
+}

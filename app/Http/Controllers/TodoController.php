@@ -54,4 +54,9 @@ class TodoController extends Controller
         ]);
         return redirect()->back();
     }
+
+    public function delete(Todo $todo){
+        $todo->delete();
+        return redirect()->back();
+    }
 }
