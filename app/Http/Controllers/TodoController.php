@@ -28,6 +28,7 @@ class TodoController extends Controller
     public  function store( Request $request){
         $validated = $request->validate([
             'title' => 'required|unique:todos|max:255',
+            'description' => 'required|unique:todos|max:255',
         ]);
         
         // $title = new Todo();
@@ -52,6 +53,11 @@ class TodoController extends Controller
     }
 
     public  function update( Request $request, Todo $todo){
+
+        $validated = $request->validate([
+            'title' => 'required|unique:todos|max:255',
+            'description' => 'required|unique:todos|max:255',
+        ]);
 
         $todo->update([
             'title'=>$request->title,
