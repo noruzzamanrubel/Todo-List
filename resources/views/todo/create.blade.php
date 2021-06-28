@@ -26,13 +26,7 @@
             <div class="form-group">
                 <textarea class="form-control" placeholder="Description" name="description" rows="3"></textarea>
             </div>
-            <div class="add-task p-3">
-                <h4>Add Steps For task</h4>
-                <a class="btn btn-info ml-3"><i class="far fa-plus-square"></i></a>
-            </div>
-            <div class="form-group">
-                <input type="text" class="form-control mb-2 mr-sm-2" name="step" placeholder="Describe Step">
-            </div>
+
             <button type="submit" class="btn btn-info mb-2">Create</button>
         </form>
     </section>
