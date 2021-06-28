@@ -11,6 +11,5 @@
             <p>{{$todo->description}}</p>
         </div>
 
-
     </section>
 @endsection
