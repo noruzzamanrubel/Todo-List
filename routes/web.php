@@ -3,6 +3,7 @@
 use App\Http\Controllers\AdminController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\TodoController;
+use PHPUnit\TextUI\XmlConfiguration\CodeCoverage\Report\Php;
 
 /*
 |--------------------------------------------------------------------------
@@ -36,6 +37,7 @@ Route::middleware(['auth:sanctum,web', 'verified'])->get('/dashboard', function 
 // Route::middleware(['auth'])->group(function () {
     
 // });
+
 
 Route::group([
     'prefix' => '',
