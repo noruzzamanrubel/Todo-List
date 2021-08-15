@@ -39,14 +39,14 @@ class TodoController extends Controller {
     }
 
     /**
-     * @param Todo 
+     * Show app data
      */
     public function show( Todo $todo ) {
         return view( 'todo.show', compact( 'todo' ) );
     }
 
     /**
-     * @param Todo 
+     * Edit app data
      */
     public function edit( Todo $todo ) {
         return view( 'Todo.edit', compact( 'todo' ) );
@@ -54,7 +54,6 @@ class TodoController extends Controller {
 
     /**
      * @param Request $request
-     * @param Todo 
      */
     public function update( Request $request, Todo $todo ) {
 
@@ -71,7 +70,7 @@ class TodoController extends Controller {
     }
 
     /**
-     * @param Todo 
+     * Complete Method 
      */
     public function complete( Todo $todo ) {
         $todo->update( [
@@ -81,7 +80,7 @@ class TodoController extends Controller {
     }
 
     /**
-     * @param Todo 
+     * InComplete method
      */
     public function incomplete( Todo $todo ) {
         $todo->update( [
@@ -91,7 +90,7 @@ class TodoController extends Controller {
     }
 
     /**
-     * @param Todo 
+     * Delete data from app
      */
     public function delete( Todo $todo ) {
         $todo->delete();
