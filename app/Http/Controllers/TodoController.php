@@ -39,14 +39,14 @@ class TodoController extends Controller {
     }
 
     /**
-     * @param Todo $todo
+     * @param Todo 
      */
     public function show( Todo $todo ) {
         return view( 'todo.show', compact( 'todo' ) );
     }
 
     /**
-     * @param Todo $todo
+     * @param Todo 
      */
     public function edit( Todo $todo ) {
         return view( 'Todo.edit', compact( 'todo' ) );
@@ -54,7 +54,7 @@ class TodoController extends Controller {
 
     /**
      * @param Request $request
-     * @param Todo $todo
+     * @param Todo 
      */
     public function update( Request $request, Todo $todo ) {
 
@@ -71,7 +71,7 @@ class TodoController extends Controller {
     }
 
     /**
-     * @param Todo $todo
+     * @param Todo 
      */
     public function complete( Todo $todo ) {
         $todo->update( [
@@ -81,7 +81,7 @@ class TodoController extends Controller {
     }
 
     /**
-     * @param Todo $todo
+     * @param Todo 
      */
     public function incomplete( Todo $todo ) {
         $todo->update( [
@@ -91,7 +91,7 @@ class TodoController extends Controller {
     }
 
     /**
-     * @param Todo $todo
+     * @param Todo 
      */
     public function delete( Todo $todo ) {
         $todo->delete();
